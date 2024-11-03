@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(53, 2, 61);
+    background: linear-gradient(90deg, rgba(53,2,61,0.7064950980392157) 0%, rgba(221,90,90,1) 50%, rgba(118,93,58,1) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative; /* Required for absolute positioning of love symbols */
+}
+
+.container {
+    background: rgb(139, 11, 67);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(112, 109, 109, 0.3);
+    max-width: 400px;
+    width: 90%;
+    z-index: 1; /* Ensure it's above the floating hearts */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+
+.hidden {
+    display: none;
+}
+
+#quoteImage {
+    margin-top: 10px;
+    width: 50%;
+    max-width: 300px;
+    border-radius: 10px; /* Optional for styling */
+}
+#loveSymbol {
+    display: inline-block;
+    animation: pulse 1s infinite; /* Adjust timing as needed */
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.love-symbol {
+    position: absolute;
+    color: red;
+    font-size: 48px; /* Adjust size as needed */
+    animation: float 3s ease-in-out infinite; /* Animation for floating effect */
+    opacity: 0.7;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(50px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Optional: Staggering animations for a more dynamic effect */
+.love-symbol:nth-child(1) { animation-delay: 0s; }
+.love-symbol:nth-child(2) { animation-delay: 0.5s; }
+.love-symbol:nth-child(3) { animation-delay: 1s; }
+.love-symbol:nth-child(4) { animation-delay: 1.5s; }
+.love-symbol:nth-child(5) { animation-delay: 2s; }
+.love-symbol:nth-child(6) { animation-delay: 2.5s; }
+.love-symbol:nth-child(7) { animation-delay: 3s; }
+.love-symbol:nth-child(8) { animation-delay: 3.5s; }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
